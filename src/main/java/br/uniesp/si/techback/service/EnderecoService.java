@@ -1,6 +1,6 @@
 package br.uniesp.si.techback.service;
 
-import br.uniesp.si.techback.dto.endereco.EnderecoDTO;
+import br.uniesp.si.techback.dto.endereco.EnderecoCreateDTO;
 import br.uniesp.si.techback.model.Endereco;
 import br.uniesp.si.techback.repository.EnderecoRepository;
 import jakarta.persistence.EntityNotFoundException;
@@ -17,7 +17,7 @@ public class EnderecoService {
         this.repository = repository;
     }
 
-    public Endereco salvar(EnderecoDTO dto) {
+    public Endereco salvar(EnderecoCreateDTO dto) {
         Endereco e = new Endereco();
         e.setLogradouro(dto.logradouro());
         e.setNumero(dto.numero());

@@ -40,7 +40,7 @@ public class FavoritoService {
     }
 
     public void remover(UUID usuarioId, UUID conteudoId) {
-        repository.deleteByIdUsuarioIdAndConteudoId(usuarioId, conteudoId);
+        repository.deleteById(usuarioId, conteudoId);
     }
 
     public List<FavoritoResponseDTO> listar(UUID usuarioId) {
