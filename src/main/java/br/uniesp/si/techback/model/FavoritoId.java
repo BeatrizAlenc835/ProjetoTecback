@@ -8,11 +8,11 @@ import java.util.UUID;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode
+@NoArgsConstructor
 @Embeddable
 public class FavoritoId implements Serializable {
+
     private UUID usuarioId;
     private UUID conteudoId;
 }

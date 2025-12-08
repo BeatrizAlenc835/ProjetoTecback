@@ -1,12 +1,12 @@
 package br.uniesp.si.techback.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import java.time.LocalDate;
+import lombok.*;
+import java.time.LocalDateTime;
+import java.util.UUID;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -14,8 +14,8 @@ import java.time.LocalDate;
 public class Filme {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue
+    private UUID id;
 
     @Column(nullable = false, length = 100)
     private String titulo;
@@ -23,15 +23,26 @@ public class Filme {
     @Column(columnDefinition = "TEXT")
     private String sinopse;
 
-    @Column(name = "data_lancamento")
-    private LocalDate dataLancamento;
+    @Column(nullable = false)
+    private Integer ano;
+
+    @Column(name = "duracao_minutos", nullable = false)
+    private Integer duracaoMinutos;
 
     @Column(length = 50)
     private String genero;
 
-    @Column(name = "duracao_minutos")
-    private Integer duracaoMinutos;
+    private LocalDateTime criadoEm;
+    private LocalDateTime atualizadoEm;
 
-    @Column(name = "classificacao_indicativa", length = 10)
-    private String classificacaoIndicativa;
+    @PrePersist
+    public void beforeInsert() {
+        criadoEm = LocalDateTime.now();
+        atualizadoEm = criadoEm;
+    }
+
+    @PreUpdate
+    public void beforeUpdate() {
+        atualizadoEm = LocalDateTime.now();
+    }
 }
