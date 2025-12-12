@@ -18,7 +18,7 @@ Este projeto foi desenvolvido utilizando **Spring Boot 3**, **Spring Data JPA**,
 - [🔧 Migrations com Flyway](#-migrations-com-flyway)
 - [✔ Critérios de Aceite Atendidos](#-critérios-de-aceite-atendidos)
 - [📌 Extras Implementados](#-extras-implementados)
-- [👤 Autores](#-autores)
+- [👤 Autor](#-autor)
 
 ---
 
@@ -56,7 +56,7 @@ O código segue padrões profissionais e está totalmente modularizado.
 
 # 📁 Estrutura do Projeto
 
-src/main/java/br/uniesp/si/techback/  
+src/main/java/br/fam/si/techback/  
 │  
 ├── controller/ → Controllers REST  
 ├── service/ → Regras de negócio  
@@ -181,7 +181,7 @@ DELETE /metodos/{id}
 
 ### 1. Clonar o repositório
 ```bash
-  git clone https://github.com/Keven-sn/ProjetoTecback.git
+  git clone https://github.com/BeatrizAlenc835/ProjetoTecback.git
   ```
 
 ### 2. Configurar PostgreSQL
@@ -250,8 +250,8 @@ SenhaForte
 
 ---
 
-# 👤 Autores
+# 👤 Autor
 
-##### Keven Douglas, Entony Lucas, Ridael Paulo  
-##### Projeto desenvolvido para disciplina de Tecnologias para Back-end  
-##### Universidade: UNIESP
+##### Beatriz Alencar, Entony Lucas, Ridael Paulo 
+##### Projeto desenvolvido para disciplina de Tecnologias para Back-end
+##### Universidade: Universidade das Americas (FAM)
